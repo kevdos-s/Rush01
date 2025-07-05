@@ -6,7 +6,7 @@
 /*   By: kevdos-s <kevdos-s@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 22:47:01 by kevdos-s          #+#    #+#             */
-/*   Updated: 2025/07/05 17:59:49 by kevdos-s         ###   ########.fr       */
+/*   Updated: 2025/07/05 22:02:07 by kevdos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,13 @@ int main()
 	//		ex: int asked_column_up[4]; int asked_column_down[4]; int asked_row_left[4]; int asked_row_right[4];
 	//faire une fonction atoi du coup
 
-
-
 	rush();
 }
 
 void rush()
 {
 
+	int map[4][4];
 	// pour cree une map avec des données pourrie
 	int **l_map = ft_create_dummy_map(m_max_row, m_max_column);
 
@@ -94,7 +93,7 @@ void ft_fill_map(int **p_map, int *p_up, int *p_down, int *p_left, int *p_right)
 			{
 				p_map[m_max_row - 1][current_column] = m_max_column;
 			}
-
+			//		si c'est le max, ecrira la colonne
 			if(p_down[current_column] == m_max_column)
 			{
 				p_map[current_row][current_column] = m_max_column - current_row;
